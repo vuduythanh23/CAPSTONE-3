@@ -1,0 +1,15 @@
+#bannerCarousel {
+  overflow: hidden; /* Không cho nội dung vượt ra ngoài */
+}
+
+#bannerCarousel .carousel-inner {
+  height: 100%; /* Chiều cao đầy đủ */
+}
+
+#bannerCarousel .carousel-item img {
+  width: 100%; /* Chiều rộng đầy đủ */
+  height: 100%; /* Chiều cao đầy đủ */
+  object-fit: contain; /* Đảm bảo ảnh phủ đầy và không bị méo */
+  object-position: center; /* Căn giữa nội dung ảnh */
+}
+
