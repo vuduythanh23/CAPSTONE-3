@@ -1,15 +1,144 @@
-#bannerCarousel {
-  overflow: hidden; /* Không cho nội dung vượt ra ngoài */
+/* General Styles */
+body {
+  background-image: url('../../assets/assortment-cinema-elements-red-background-with-copy-space.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  padding-bottom: 50px;
 }
 
-#bannerCarousel .carousel-inner {
-  height: 100%; /* Chiều cao đầy đủ */
+/* Header Styles */
+.christmas-header {
+  background-color: #004d00;
+  border-bottom: 4px solid #ffcccb;
 }
 
+.christmas-header .logo h1 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ffffcc;
+}
+
+.christmas-header nav a {
+  color: #ffcccb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.christmas-header nav a:hover {
+  color: #ffffcc;
+  text-decoration: underline;
+}
+
+/* Snowflake Animation */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  pointer-events: none;
+  color: white;
+  z-index: 9999;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Cinema List */
+.list-group-item {
+  background-color: transparent;
+  color: white; /* Đặt màu chữ trắng */
+  font-weight: bold;
+  border: none; /* Loại bỏ viền mặc định */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Tạo viền chữ */
+}
+
+.list-group-item:hover {
+  background-color: goldenrod;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Hiệu ứng chữ khi hover */
+}
+
+/* Banner Carousel */
 #bannerCarousel .carousel-item img {
-  width: 100%; /* Chiều rộng đầy đủ */
-  height: 100%; /* Chiều cao đầy đủ */
-  object-fit: contain; /* Đảm bảo ảnh phủ đầy và không bị méo */
-  object-position: center; /* Căn giữa nội dung ảnh */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
+/* Footer Styles */
+.christmas-footer {
+  background-color: #004d00;
+  border-top: 4px solid #ffcccb;
+  padding: 40px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffcc;
+  text-align: center;
+}
+
+.christmas-footer h5 {
+  color: #ffcccb;
+  margin-bottom: 20px;
+}
+
+.christmas-footer a {
+  color: #ffffcc;
+  margin-bottom: 10px;
+}
+
+.christmas-footer a:hover {
+  color: #ffcccb;
+}
+
+.christmas-footer .fab {
+  font-size: 1.5rem;
+  color: #ffffcc;
+  margin: 0 10px;
+}
+
+.christmas-footer .fab:hover {
+  color: #ffcccb;
+}
+
+/* Styles for Titles */
+h4, .movie-schedule-title {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Làm nổi tiêu đề */
+  font-weight: bold;
+}
+
+.movie-schedule-item {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Làm nổi text lịch chiếu */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .christmas-header .d-flex,
+  .christmas-footer {
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .christmas-header nav,
+  .christmas-footer h5 {
+    margin-bottom: 15px;
+  }
+
+  .christmas-footer p {
+    margin-bottom: 8px;
+  }
+}

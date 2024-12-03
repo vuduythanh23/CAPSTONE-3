@@ -19,7 +19,7 @@ const NowShowing = () => {
 
   return (
     <div>
-      <h2 className="mb-4">Now Showing</h2>
+      <h2 className="mb-4" style={{color: 'white'}}>Now Showing</h2>
       <div className="row">
         {movies.map((movie) => (
           <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={movie.maPhim}>
